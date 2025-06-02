@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4C Band - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../logo.jpg" alt="U4C Band Logo" class="logo">
+            <h2>Admin Panel</h2>
+        </div>
+        <div class="admin-info">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=random" alt="Admin" class="admin-avatar">
+            <div>
+                <h3 id="adminName">Admin</h3>
+                <p>Administrator</p>
+            </div>
+                </div>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active" data-target="home">
+                <i class="fas fa-home"></i>
+                <span>Home Page</span>
+            </a>
+            <a href="#" class="nav-item" data-target="media">
+                            <i class="fas fa-music"></i>
+                <span>Media Page</span>
+            </a>
+            <a href="#" class="nav-item" data-target="gallery">
+                            <i class="fas fa-images"></i>
+                <span>Gallery Page</span>
+            </a>
+            <a href="#" class="nav-item" data-target="merch">
+                            <i class="fas fa-shopping-bag"></i>
+                <span>Merchandise Page</span>
+            </a>
+            <a href="#" class="nav-item" data-target="how">
+                <i class="fas fa-question-circle"></i>
+                <span>How Page</span>
+            </a>
+            <a href="#" class="nav-item" data-target="auditions">
+                            <i class="fas fa-user-plus"></i>
+                <span>Auditions Page</span>
+            </a>
+            <a href="#" class="nav-item" data-target="events">
+                <i class="fas fa-calendar"></i>
+                <span>Events Page</span>
+            </a>
+            </nav>
+            <div class="sidebar-footer">
+            <button id="logoutBtn" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">
+                    <i class="fas fa-sign-out-alt"></i>
+                Logout
+                </button>
+            </div>
+        </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page Section -->
+        <section id="home" class="section active">
+            <div class="header">
+                <h2 class="page-title">Home Page Management</h2>
+                <div class="action-buttons">
+                    <a href="../index.html" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Website
+                    </a>
+                    <button class="btn btn-primary" id="saveHomeBtn">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                        </button>
+                    </div>
+                </div>
+
+            <!-- Hero Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Hero Section</h3>
+                </div>
+                <form id="heroForm" class="settings-form">
+                    <div class="form-group">
+                        <label for="heroVideo">Hero Background Video</label>
+                        <input type="file" id="heroVideo" name="heroVideo" accept="video/*" class="form-control">
+                        <small>Upload a high-quality video (MP4 format, max 50MB)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="heroTitle">Hero Title</label>
+                        <input type="text" id="heroTitle" name="heroTitle" class="form-control" placeholder="Main headline">
+                    </div>
+                    <div class="form-group">
+                        <label for="heroSubtitle">Hero Subtitle</label>
+                        <input type="text" id="heroSubtitle" name="heroSubtitle" class="form-control" placeholder="Subheadline">
+                    </div>
+                </form>
+                        </div>
+
+            <!-- Latest Release Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Latest Release</h3>
+                        </div>
+                <form id="latestReleaseForm" class="settings-form">
+                    <div class="form-group">
+                        <label for="releaseTitle">Release Title</label>
+                        <input type="text" id="releaseTitle" name="releaseTitle" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="releaseArtist">Artist</label>
+                        <input type="text" id="releaseArtist" name="releaseArtist" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="releaseImage">Cover Image</label>
+                        <input type="file" id="releaseImage" name="releaseImage" accept="image/*" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="spotifyLink">Spotify Link</label>
+                        <input type="url" id="spotifyLink" name="spotifyLink" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="youtubeLink">YouTube Link</label>
+                        <input type="url" id="youtubeLink" name="youtubeLink" class="form-control">
+                    </div>
+                </form>
+                </div>
+
+            <!-- Mission Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Mission Section</h3>
+                </div>
+                <form id="missionForm" class="settings-form">
+                    <div class="form-group">
+                        <label for="missionTitle">Mission Title</label>
+                        <input type="text" id="missionTitle" name="missionTitle" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="missionText">Mission Text</label>
+                        <textarea id="missionText" name="missionText" class="form-control" rows="4"></textarea>
+                    </div>
+                </form>
+                </div>
+            </section>
+
+        <!-- Media Page Section -->
+        <section id="media" class="section">
+            <div class="header">
+                <h2 class="page-title">Media Page Management</h2>
+                <div class="action-buttons">
+                    <a href="../media.html" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Website
+                    </a>
+                    <button class="btn btn-primary" id="saveMediaBtn">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                    </button>
+                    <button class="btn" id="addSongBtn">
+                            <i class="fas fa-plus"></i>
+                        Add Song
+                        </button>
+                    </div>
+                </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Songs List</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search songs..." class="form-control">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div id="songsList" class="list-container">
+                    <!-- Songs will be loaded here -->
+                </div>
+                </div>
+            </section>
+
+        <!-- Gallery Page Section -->
+        <section id="gallery" class="section">
+            <div class="header">
+                <h2 class="page-title">Gallery Page Management</h2>
+                <div class="action-buttons">
+                    <a href="../gallery.html" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Website
+                    </a>
+                    <button class="btn btn-primary" id="saveGalleryBtn">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                    </button>
+                    <button class="btn" id="addImageBtn">
+                            <i class="fas fa-plus"></i>
+                        Add Image
+                        </button>
+                    </div>
+                </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Gallery Images</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search images..." class="form-control">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div id="galleryGrid" class="grid-container">
+                    <!-- Gallery items will be loaded here -->
+                </div>
+                </div>
+            </section>
+
+        <!-- Merchandise Page Section -->
+        <section id="merch" class="section">
+            <div class="header">
+                <h2 class="page-title">Merchandise Page Management</h2>
+                <div class="action-buttons">
+                    <a href="../merch.html" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Website
+                    </a>
+                    <button class="btn btn-primary" id="saveMerchBtn">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                    </button>
+                    <button class="btn" id="addProductBtn">
+                            <i class="fas fa-plus"></i>
+                        Add Product
+                        </button>
+                    </div>
+                </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Products List</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products..." class="form-control">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div id="productsList" class="list-container">
+                    <!-- Products will be loaded here -->
+                </div>
+                </div>
+            </section>
+
+        <!-- How Page Section -->
+        <section id="how" class="section">
+            <div class="header">
+                <h2 class="page-title">How Page Management</h2>
+                <div class="action-buttons">
+                    <a href="../how.html" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Website
+                    </a>
+                    <button class="btn btn-primary" id="saveHowBtn">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                        </button>
+                    </div>
+                </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">How We Work Content</h3>
+                </div>
+                <form id="howForm" class="settings-form">
+                    <div class="form-group">
+                        <label for="howTitle">Page Title</label>
+                        <input type="text" id="howTitle" name="howTitle" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="howContent">Content</label>
+                        <textarea id="howContent" name="howContent" class="form-control" rows="6"></textarea>
+                    </div>
+                </form>
+                </div>
+            </section>
+
+        <!-- Auditions Page Section -->
+        <section id="auditions" class="section">
+            <div class="header">
+                <h2 class="page-title">Auditions Page Management</h2>
+                <div class="action-buttons">
+                    <a href="../auditions.html" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Website
+                    </a>
+                    <button class="btn btn-primary" id="saveAuditionsBtn">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                    </button>
+                </div>
+                    </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Auditions Content</h3>
+                    <div class="toggle-container">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="auditionsToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-label">Enable Auditions</span>
+                    </div>
+                        </div>
+                <form id="auditionsForm" class="settings-form">
+                    <div class="form-group">
+                        <label for="auditionsTitle">Page Title</label>
+                        <input type="text" id="auditionsTitle" name="auditionsTitle" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="auditionsContent">Content</label>
+                        <textarea id="auditionsContent" name="auditionsContent" class="form-control" rows="6"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="auditionsForm">Application Form</label>
+                        <textarea id="auditionsForm" name="auditionsForm" class="form-control" rows="4"></textarea>
+                    </div>
+                </form>
+                </div>
+            </section>
+
+        <!-- Events Page Section -->
+        <section id="events" class="section">
+            <div class="header">
+                <h2 class="page-title">Events Page Management</h2>
+                <div class="action-buttons">
+                    <a href="../events.html" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Website
+                    </a>
+                    <button class="btn btn-primary" id="saveEventsBtn">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                    </button>
+                    <button class="btn" id="addEventBtn">
+                        <i class="fas fa-plus"></i>
+                        Add Event
+                        </button>
+                    </div>
+                </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Events List</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search events..." class="form-control">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div id="eventsList" class="list-container">
+                    <!-- Events will be loaded here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+            <!-- Modal content will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Load Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+
+    <!-- Load JavaScript files -->
+    <script src="./backend.js"></script>
+    <script src="./admin.js"></script>
+    <script>
+        // Check authentication
+        firebase.auth().onAuthStateChanged((user) => {
+            if (!user) {
+                window.location.href = 'login.html';
+            } else {
+                document.getElementById('adminName').textContent = user.email;
+            }
+        });
+
+        // Handle logout
+        document.getElementById('logoutBtn').addEventListener('click', async () => {
+            try {
+                await firebase.auth().signOut();
+                window.location.href = 'login.html';
+            } catch (error) {
+                console.error('Error signing out:', error);
+            }
+        });
+    </script>
+</body>
+</html> 
