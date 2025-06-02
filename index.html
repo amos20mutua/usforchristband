@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Us For Christ Band - Worship Music</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html">
+                <img src="./logo.jpg" alt="U4C Band Logo" class="logo" loading="eager" width="75" height="75" decoding="async" />
+            </a>
+        </div>
+        <div class="main-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="media.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="merch.html">Merchandise</a>
+            <a href="how.html">How</a>
+            <a href="auditions.html" class="auditions-link hidden">Join Us</a>
+        </div>
+    </nav>
+
+    <!-- Left Sidebar Navigation -->
+    <div class="left-sidebar">
+        <div class="sidebar-links">
+            <a href="index.html" class="active" aria-label="Home"><i class="fa-solid fa-house"></i></a>
+            <a href="media.html" aria-label="Music"><i class="fas fa-music"></i></a>
+            <a href="gallery.html" aria-label="Gallery"><i class="fas fa-images"></i></a>
+            <a href="merch.html" aria-label="Merchandise"><i class="fas fa-shopping-bag"></i></a>
+            <a href="how.html" aria-label="How"><i class="fas fa-question-circle"></i></a>
+            <a href="auditions.html" class="auditions-link hidden" aria-label="Join Us"><i class="fas fa-user-plus"></i></a>
+        </div>
+    </div>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop id="hero-video" playsinline preload="metadata">
+                <source src="assets/videos/hero-background.mp4" type="video/mp4">
+                <source src="assets/videos/hero-background.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+            <div class="video-controls">
+                <button class="video-control-btn" id="muteBtn" aria-label="Toggle mute">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hero-content" id="heroContent">
+            <h1>Us For Christ Band</h1>
+            <p class="tagline">Perceiving, Concieving, Feeling, Sourcing and dispensing Christ through music</p>
+            <div class="hero-buttons">
+                <a href="media.html" class="cta-button">Explore Our Music</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to Explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Latest Release Section -->
+    <section class="latest-release">
+        <div class="container">
+            <div class="release-content">
+                <div class="release-info">
+                    <h2>Latest Release</h2>
+                    <div id="latestReleaseContent">
+                        <!-- Content will be loaded dynamically -->
+                        <div class="loading">Loading latest release...</div>
+                    </div>
+                </div>
+                <div class="release-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Content -->
+    <section class="featured">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Upcoming Events</h3>
+                    <p>Join us for worship this Sunday</p>
+                    <a href="events.html" class="link-button">View Schedule</a>
+                </div>
+                <div class="featured-item">
+                    <i class="fas fa-music"></i>
+                    <h3>Worship Resources</h3>
+                    <p>Download chord charts and lyrics</p>
+                    <a href="media.html" class="link-button">Get Resources</a>
+                </div>
+                <div class="featured-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Join Our Team</h3>
+                    <p>Be part of our worship ministry</p>
+                    <a href="auditions.html" class="link-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>We are a community of worshipers dedicated to creating an atmosphere where people can encounter God through music. Our goal is to lead others into a deeper relationship with Christ through authentic worship and meaningful lyrics.</p>
+            <div class="mission-values">
+                <div class="value-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Authenticity</h3>
+                    <p>Leading worship with genuine hearts</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Community</h3>
+                    <p>Building relationships through worship</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-cross"></i>
+                    <h3>Faith</h3>
+                    <p>Growing together in Christ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section about">
+                    <p>Us For Christ Band - Perceiving, Concieving, Feeling, Sourcing and dispensing Christ through music</p>
+                </div>
+                
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <a href="mailto:mutuaamos35@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>mutuaamos35@gmail.com</span>
+                        </a>
+                        <a href="https://wa.me/254105255479" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+254 105 255 479</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" rel="noopener"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" rel="noopener"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Spotify" rel="noopener"><i class="fab fa-spotify"></i></a>
+                        <a href="#" aria-label="Join WhatsApp Group" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Us For Christ Band. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js" type="module" defer></script>
+</body>
+</html>
